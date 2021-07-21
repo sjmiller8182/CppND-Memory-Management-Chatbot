@@ -57,8 +57,7 @@ ChatBot::ChatBot(const ChatBot &source) {
 }
 
 // copy assignemnt operator
-ChatBot &ChatBot::operator=(const ChatBot &source)
-{
+ChatBot &ChatBot::operator=(const ChatBot &source) {
     if (this == &source)
         return *this;
     delete[] _image;
@@ -73,8 +72,7 @@ ChatBot &ChatBot::operator=(const ChatBot &source)
 }
 
 // ChatBot Move Constructor
-ChatBot::ChatBot(ChatBot &&source)
-{
+ChatBot::ChatBot(ChatBot &&source) {
     this->_image = source._image;
     source._image = NULL;
     //*_image = *source._image;
@@ -89,8 +87,7 @@ ChatBot::ChatBot(ChatBot &&source)
 }
 
 // Move Assignment Operator
-ChatBot &ChatBot::operator=(ChatBot &&source)
-{
+ChatBot &ChatBot::operator=(ChatBot &&source) {
     if (this == &source)
         return *this;
     delete[] _image;
